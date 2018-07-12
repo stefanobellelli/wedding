@@ -1,0 +1,292 @@
+/*GENERAL SETTINGS*/
+
+html {
+	max-width: 900px;
+	margin: auto;
+	background-color: #FFFFF9;
+	font-family: Lato, sans-serif;
+	font-size: 1.25rem;
+	font-size: calc(.7rem + 1vmin);
+}
+body {
+	margin: 4vh 4vw;
+}
+a:link, a:visited {
+	color: inherit;
+}
+
+/**/
+
+/*HEADER*/
+
+header {
+	margin: 0;
+	padding-bottom: 0.8rem;
+	color: /*#ff2e5e;*/#EE0099;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+header a {
+	text-decoration: none;
+}
+
+/**/
+
+/*NAVBAR*/
+
+/*General*/
+nav div {
+	background-color: #FF9900;
+	color: white;
+	text-transform: uppercase;
+}
+nav a {
+	text-decoration: none;
+}
+nav a:hover, nav a:active {
+	background-color: #CC6600;
+}
+
+/*Horizontal*/
+#horizontal {
+	display: table;
+	width: 100%;
+}
+#horizontal a {
+	display: table-cell;
+	height: 3rem;
+	padding: 0 0.75rem;
+	text-align: center;
+	vertical-align: middle;
+}
+#home_pic { /*home link*/
+	width: 2rem;
+}
+a#hamburger { /*hamburger link*/
+	display: none;
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+/*Dropdown*/
+#dropdown {
+	display: none;
+	float: right;
+	width: 10rem;
+}
+#dropdown a {
+	display: block;
+	padding: 1rem;
+	text-align: right;
+}
+
+/*Responsive*/
+@media screen and (max-width: 650px) {
+	#horizontal a:not(:first-child):not(:last-child) {
+		display: none;
+	}
+	a#homebutton {
+		text-align: left;
+	}
+	a#hamburger {
+		display: table-cell;
+		text-align: right;
+  }
+}
+
+/**/
+
+/*MAIN*/
+
+/*General*/
+main {
+	margin: 2rem 1rem;
+	color: #990033;
+	line-height: 1.5rem;
+}
+main h1 {
+	margin: 0;
+	padding-bottom: .25rem;
+	font-variant: small-caps;
+}
+main p {
+	margin: .5rem 0;
+	text-align: justify;
+}
+
+/*MAIN ASIDE (Side Box)*/
+
+/*Box*/
+aside {
+	float: right;
+	width: 35%;
+	margin-left: 2rem;
+	margin-bottom: 0.5rem;
+	padding: 1rem 1.5rem;
+	font-size: .85rem;
+	line-height: 1.25rem;
+	background-color: #FFFFAA;
+}
+
+/*Header*/
+
+#don_head {
+	width: 100%;
+}
+#don_head h1 {
+	color: #EE0099;
+	font-size: 1.5rem;
+	text-align: center;
+}
+#don_head img {
+	display: none;
+	float: right;
+	width: 1rem;
+	padding: .15rem;
+}
+
+/*Body*/
+
+.button { /*paypal & bank coord*/
+	width: 75%;
+	padding: 0.25rem;
+	margin: auto;
+	margin-top: 0.75rem;
+	background-color: white;
+	text-align: center;
+}
+.button a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: .9rem;
+	font-weight: bold;
+}
+#pplogo { /*paypal*/
+	width: 100%;
+	max-width: 7.5rem;
+}
+
+/*MAIN ASIDE (Popup)*/
+
+/*Overlay*/
+#overlay {
+	visibility: hidden;
+
+	position: fixed;
+	top:    0;
+	bottom: 0;
+	left:   0;
+	right:  0;
+
+	opacity: 0;
+	transition: all 500ms;
+
+	background: rgba(0, 0, 0, 0.7);
+}
+#overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*Popup*/
+#popup {
+	position: relative;
+	width: 70%;
+	max-width: 650px;
+	margin: 10vh auto;
+	padding: 1rem;
+	background: white;
+}
+#cross { /*to close*/
+	position: absolute;
+	top:   1rem;
+	right: 1rem;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
+}
+#cross:hover {
+  color: #CC3333;
+}
+
+/*MAIN ARTICLE*/
+
+/*General*/
+article {
+	padding-bottom: 1rem;
+}
+article h1 {
+	color: #FF7700;
+	font-size: 1.75rem;
+}
+article a {
+	font-weight: bold;
+}
+article a:hover, article a:active {
+	color: #DD0099;
+}
+.minititle {
+	color: #FF7700;
+	font-size: .9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.abbrev, .num {
+	font-size: .9rem;
+}
+
+/*Bible*/
+.bible {
+	margin: 1rem;
+	margin-top: .5rem;
+	font-size: .9rem;
+	}
+.bible p {
+	margin: .2rem 0;
+	font-style: italic;
+}
+.bible p.nested {
+	margin-left: 2rem;
+}
+.bibbook {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.bibnum {
+	font-size: .9rem;
+}
+.bibbook .bibnum {
+	font-size: .75rem;
+}
+
+/*Inline Titles*/
+.title {
+	margin: 0;
+	padding-right: .2rem;
+	color: #FF5599;
+	font-size: 1.1rem;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/**/
+
+/*FOOTER*/
+
+footer {
+	height: 3rem;
+	width: 100%;
+	color: white;
+	background-color: #FF9900;
+	font-size: .75rem;
+	text-align: center;
+}
+footer p {margin:auto;
+	padding: .9rem;
+}
+footer a:hover, a:active {
+	color: #993300;
+}
